@@ -13,5 +13,5 @@ two:
   description: MyText
   image_url: MyString.jpg
   origin: MyString
-  website: MyString3
+  website: MyString
   price: 9.99

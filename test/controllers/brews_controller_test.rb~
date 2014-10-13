@@ -17,8 +17,8 @@ class BrewsControllerTest < ActionController::TestCase
   end
 
   test "should create brew" do
-    assert_difference('Brew.count') do
-      post :create, brew: { description: @brew.description, image_url: @brew.image_url, origin: @brew.origin, price: @brew.price, title: "New Title", website: "New URL" }
+    assert_difference('Brew.count',+1) do
+      post :create, brew: { description: @brew.description, image_url: @brew.image_url, origin: @brew.origin, price: @brew.price, title: @brew.title, website: @brew.website }
     end
 
     assert_redirected_to brew_path(assigns(:brew))
