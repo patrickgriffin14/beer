@@ -25,9 +25,12 @@
         <td><%= brew.origin %></td>
         <td><a href="<%=brew.website %>"><%= brew.website %></a></td>
         <td><%= brew.price %></td>
-        <td><%= link_to 'Show', brew %></td>
-        <td><%= link_to 'Edit', edit_brew_path(brew) %></td>
-        <td><%= link_to 'Destroy', brew, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class='list_actions'>
+  <%= link_to 'Show', brew %><br/>
+  <%= link_to 'Edit', edit_brew_path(brew) %><br/>
+  <%= link_to 'Destroy', brew, method: :delete, 
+      data: { confirm: 'Are you sure?' } %>
+</td>
       <% end %>
     <% end %>
   </tbody>

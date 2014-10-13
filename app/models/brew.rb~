@@ -1,0 +1,3 @@
+class Brew < ActiveRecord::Base
+validates :title, :description, :image_url, :website, :origin, presence: true
+end
