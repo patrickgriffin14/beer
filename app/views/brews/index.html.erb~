@@ -23,7 +23,7 @@
 </td>
         
         <td><%= brew.origin %></td>
-        <td><a href="<%=brew.website %>"><%= brew.website %></a></td>
+        <td href="<%=brew.website %>"><%= brew.website %></td>
         <td><%= brew.price %></td>
         <td><%= link_to 'Show', brew %></td>
         <td><%= link_to 'Edit', edit_brew_path(brew) %></td>
