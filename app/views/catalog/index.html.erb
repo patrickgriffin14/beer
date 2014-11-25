@@ -1,0 +1,16 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Beer Catalog</h1>
+
+<% @brews.each do |brew| %>
+  <div class="entry">
+    <%= image_tag(brew.image_url, size: "100") %>
+    <h3><%= brew.title %></h3>
+    <%= sanitize brew.description %>
+    <div class="price_line">
+      <span class="price"><%= brew.price %></span>
+    </div>
+  </div>
+<% end %>
