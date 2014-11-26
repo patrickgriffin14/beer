@@ -21,7 +21,7 @@ class LineItemsControllerTest < ActionController::TestCase
       post :create, brew_id: brews(:ruby)
     end
 
-    assert_redirected_to catalog_path
+    assert_redirected_to favourite_path(assigns(:line_item).favourite)
   end
 
   test "should show line_item" do

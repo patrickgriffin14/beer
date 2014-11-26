@@ -41,10 +41,9 @@ class FavouritesControllerTest < ActionController::TestCase
 
   test "should destroy favourite" do
     assert_difference('Favourite.count', -1) do
-	session[:favourite_id] = @favourite.id      
-	delete :destroy, id: @favourite
+      delete :destroy, id: @favourite
     end
 
-    assert_redirected_to catalog_path
+    assert_redirected_to favourites_path
   end
 end

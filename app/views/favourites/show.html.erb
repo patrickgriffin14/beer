@@ -2,9 +2,21 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>Your Beer of Choice</h2>
-<ul>    
+<h2>Your Favourite Beers</h2>
+<table>
   <% @favourite.line_items.each do |item| %>
-    <li><%= item.quantity %> &times;<%= item.brew.title %></li>
+    <tr>
+      <td><%= item.quantity %>&times;</td>
+      <td><h3><%= item.brew.title %></h3>
+      <%= sanitize(item.brew.description) %></td>
+      <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+    </tr>
   <% end %>
-</ul>
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@favourite.total_price) %></td>
+  </tr>
+</table>
+<%= button_to 'Clear Favourites', @favourite, method: :delete, data: { confirm: 'Are you sure?' } %>
+
