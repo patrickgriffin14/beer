@@ -10,7 +10,8 @@
     <h3><%= brew.title %></h3>
     <%= sanitize(brew.description) %>
     <div class="price_line">
-      <span class="price"><%= number_to_currency(product.price) %></span>
+      <span class="price"><%= number_to_currency(brew.price) %></span>
+      <%= button_to 'Add to Favourites', line_items_path(brew_id: brew) %>
     </div>
   </div>
 <% end %>

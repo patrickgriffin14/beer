@@ -28,7 +28,7 @@ class LineItemsController < ApplicationController
   def create
     
     brew = Brew.find(params[:brew_id])
-    @line_item = @favourite.add_brew(brew.id)
+    @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save

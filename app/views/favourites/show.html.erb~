@@ -5,6 +5,6 @@
 <h2>Your Beer of Choice</h2>
 <ul>    
   <% @favourite.line_items.each do |item| %>
-    <li><%= item.quantity %> &times;<%= item.brew.title %></li>
+    <li><%= item.brew.title %><%= item.quantity %> &times;</li>
   <% end %>
 </ul>
