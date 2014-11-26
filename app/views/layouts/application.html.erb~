@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Beer</title>
+  <title>MyCraftBeer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,24 @@
 <body>
 
 <%= content_tag :body, class: controller.controller_name do %>
-  <%= yield %>
+  
+<div id="banner">
+  <%= image_tag("duff.jpg", size: '75') %>
+  <%= @page_title || "The Beer of Choice" %>
+</div>
+  <div id="columns">
+  <div id="side">
+    <ul>
+	<li><a href="http://www....">Home</a></li>
+	<li><a href="http://www..../faq">Questions</a></li>
+	<li><a href="http://www..../news">News</a></li>
+	<li><a href="http://www..../contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <%= yield %>
+  </div>
+</div>
 <% end %>
 
 </body>
