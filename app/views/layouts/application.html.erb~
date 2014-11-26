@@ -11,12 +11,13 @@
 <%= content_tag :body, class: controller.controller_name do %>
   
 <div id="banner">
-  <%= image_tag("duff.jpg", size: '75') %>
+  <%= image_tag("duff.jpg", size: '60') %>
   <%= @page_title || "The Beer of Choice" %>
 </div>
   <div id="columns">
   <div id="side">
     <ul>
+	<span id="date-time"><\/span>
 	<li><a href="http://www....">Home</a></li>
 	<li><a href="http://www..../faq">Questions</a></li>
 	<li><a href="http://www..../news">News</a></li>
