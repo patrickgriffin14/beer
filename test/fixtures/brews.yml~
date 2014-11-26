@@ -13,5 +13,13 @@ two:
   description: MyText
   image_url: MyString.jpg
   origin: MyString
-  website: MyString
+  website: MyString3
   price: 9.99
+
+ruby:
+  title: Bo Bristle
+  description: IPA with a fruity twist
+  image_url: ruby.jpg
+  origin:Ireland
+  website: www.bobristle.com 
+  price: 5.59

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :line_items
+
+  resources :favourites
+
   get 'catalog/index'
 
   resources :brews
