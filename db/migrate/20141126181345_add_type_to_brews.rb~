@@ -1,0 +1,5 @@
+class AddTypeToBrews < ActiveRecord::Migration
+  def change
+    add_column :brews, :type, :string
+  end
+end

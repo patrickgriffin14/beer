@@ -13,6 +13,7 @@ test "brew attributes must not be empty" do
   assert brew.errors[:image_url].any?
   assert brew.errors[:website].any?
   assert brew.errors[:origin].any?
+  assert brew.errors[:brewtype].any?
 end
 test "brew price must be positive" do
   brew = brews(:one)

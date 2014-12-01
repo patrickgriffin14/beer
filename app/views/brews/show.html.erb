@@ -30,5 +30,10 @@
   <%= @brew.price %>
 </p>
 
+<p>
+  <strong>Type of Brew:</strong>
+  <%= @brew.brewtype %>
+</p>
+
 <%= link_to 'Edit', edit_brew_path(@brew) %> |
 <%= link_to 'Back', brews_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @brew.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @brew.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @brew.image_url %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @brew.origin %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @brew.website %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @brew.price %>
+</p>
+
+<%= link_to 'Edit', edit_brew_path(@brew) %> |
+<%= link_to 'Back', brews_path %>

@@ -1,7 +1,8 @@
 class Brew < ActiveRecord::Base
+before_action :authorize
 before_destroy :ensure_not_referenced_by_any_line_item
-has many :line_items
-validates :title, :description, :image_url, :website, :origin, presence: true
+has_many :line_items
+validates :title, :description, :image_url, :website, :origin, :brewtype, presence: true
 validates :title, :website, uniqueness: true
 validates :price, numericality: { greater_than_or_equal_to: 0.01 }
 validates :image_url, allow_blank: true, format: {

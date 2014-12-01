@@ -69,6 +69,6 @@ class BrewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brew_params
-      params.require(:brew).permit(:title, :description, :image_url, :origin, :website, :price)
+      params.require(:brew).permit(:title, :description, :image_url, :origin, :website, :price, :brewtype)
     end
 end

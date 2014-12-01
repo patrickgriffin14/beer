@@ -1,0 +1,6 @@
+require 'bcrypt'
+class User < ActiveRecord::Base
+before_action :authorize  
+has_secure_password
+  validates :name, presence: true, uniqueness: true
+end

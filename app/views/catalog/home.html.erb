@@ -1,0 +1,25 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Beer Catalog</h1>
+<h2>Please choose a brew type!</h2>
+
+
+<h3><%= @brew[0].brewtype %></h3>
+<% @brews.each do |brew| %>
+  <div class="entry">
+    <% if brew.brewtype != @brew[0].brewtype %>
+        <h3><%= brew.brewtype %></h3>
+    <%= image_tag(brew.image_url) %>
+    <h3><%= brew.title %></h3>
+    <p id='description'><%= sanitize(brew.description) %></p>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(brew.price) %></span>
+      <%= button_to 'Add to Favourites', line_items_path(brew_id: brew) %>
+    </div>
+  </div>
+<% end %>
+
+
+

@@ -4,14 +4,14 @@ class BrewTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-test "product attributes must not be empty" do
+test "brew attributes must not be empty" do
   brew = Brew.new
   assert brew.invalid?
   assert brew.errors[:title].any?
   assert brew.errors[:description].any?
   assert brew.errors[:price].any?
   assert brew.errors[:image_url].any?
-  assert brew.errors[:wesite].any?
+  assert brew.errors[:website].any?
   assert brew.errors[:origin].any?
 end
 test "brew price must be positive" do

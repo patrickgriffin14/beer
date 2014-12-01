@@ -17,12 +17,21 @@
   <div id="columns">
   <div id="side">
     <ul>
-	<span id="date-time"><\/span>
+	<%= Time.now %>
 	<li><a href="http://www....">Home</a></li>
 	<li><a href="http://www..../faq">Questions</a></li>
 	<li><a href="http://www..../news">News</a></li>
 	<li><a href="http://www..../contact">Contact</a></li>
+        <% if session[:user_id] %>
+        <br />
+        <%= link_to 'Orders',   orders_path   %><br />
+        <%= link_to 'Products', products_path %><br />
+        <%= link_to 'Users',    users_path    %><br />
+        <br />
+        <%= button_to 'Logout', logout_path, :method => :delete   %>
+        <% end %>
     </ul>
+
   </div>
   <div id="main">
     <%= yield %>

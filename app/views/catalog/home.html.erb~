@@ -1,0 +1,11 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Beer Catalog</h1>
+<h2>Please choose a brew type!</h2>
+
+<%= select_tag(:brew, "<option>-Select a type of beer</option>" + options_from_collection_for_select(@brews, :brewtype, :brewtype, :brewtype)) %>
+
+
+

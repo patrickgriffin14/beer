@@ -1,4 +1,5 @@
 class FavouritesController < ApplicationController
+  skip_before_action :authorize, only: [:create, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_favourite
   before_action :set_favourite, only: [:show, :edit, :update, :destroy]
 

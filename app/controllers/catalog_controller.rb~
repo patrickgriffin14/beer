@@ -1,5 +1,10 @@
 class CatalogController < ApplicationController
   def index
-  @brews = Brew.order(:title)
+  @brews = Brew.order(:brewtype)
+  @brew = @brews.first
+  end
+
+  def home
+  @brews = Brew.all
   end
 end

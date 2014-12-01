@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126163248) do
+ActiveRecord::Schema.define(version: 20141201174422) do
 
   create_table "brews", force: true do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141126163248) do
     t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "brewtype"
   end
 
   create_table "favourites", force: true do |t|
@@ -39,5 +40,12 @@ ActiveRecord::Schema.define(version: 20141126163248) do
 
   add_index "line_items", ["brew_id"], name: "index_line_items_on_brew_id"
   add_index "line_items", ["favourite_id"], name: "index_line_items_on_favourite_id"
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
