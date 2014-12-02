@@ -45,15 +45,18 @@
     background: white;
   }
 
+        
   #side {
     float: right;
     padding: 1em 2em;
     width: 13em;
     background: #424DFF;
     color: white;
-
+    
     ul {
       padding: 0;
+      #acc{
+       color: #FFFFFF;}
       li {
         list-style: none;
         a {
